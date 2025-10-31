@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+    <artifactId>mpcle</artifactId>
+    <groupId>mx.gob.imss.dpes</groupId>
+    <version>1.0</version>
+  </parent>
+
+    <groupId>mx.gob.imss.dpes</groupId>
+    <artifactId>mensajes</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging>
+
+    <name>mensajes</name>
+
+    <properties>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.thorntail>2.6.0.Final</version.thorntail>    
+    </properties>
+    
+  <dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>io.thorntail</groupId>
+      <artifactId>bom-all</artifactId>
+      <version>${version.thorntail}</version>
+      <scope>import</scope>
+      <type>pom</type>
+    </dependency>
+  </dependencies>
+</dependencyManagement>   
+
+    <dependencies>      
+      <dependency>
+        <groupId>mx.gob.imss.dpes</groupId>
+        <artifactId>baseFront</artifactId>
+        <version>1.0</version>            
+        <classifier>classes</classifier>
+      </dependency>
+      <!--dependency>
+        <groupId>io.thorntail</groupId>
+        <artifactId>microprofile-openapi</artifactId>
+      </dependency-->                  
+    </dependencies>
+    
+ 
+
+<!--build>
+
+  <plugins>
+    <plugin>
+      <groupId>io.thorntail</groupId>
+      <artifactId>thorntail-maven-plugin</artifactId>
+      <version>${version.thorntail}</version>       
+      <executions>
+        <execution>
+          <goals>
+            <goal>package</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build-->
+
+</project>
